@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Karbit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--------ini head---------->
+  <header class="header">
+    <div style="color: pink;" class="judul">Favorite Character</div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html" style="color:red; text-decoration:none;">ikuyo kita</a></li>
+        <li><a href="seia.html" style="color:yellow; text-decoration:none;">yurizono seia</a></li>
+        <li><a href="alice.html" style="color:cyan; text-decoration:none;">tendou alice</a></li>
+        <li><a href="chino.html" style="color:lightgray; text-decoration:none;">caffu chino</a></li>
+        <li><a href="natsu.html" style="color:pink; text-decoration:none;">yutori natsu</a></li>
+      </ul>
+    </nav>
+    <button style="color: pink;"class="menu" onclick="toggleMobileMenu()">☰</button>
+  </header>  
+  <!----------mobile overlay-------->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <button style="color: pink;" class="close" onclick="toggleMobileMenu()">×</button>
+    <ul>
+        <li><a href="index.html" style="color:red; text-decoration:none;">ikuyo kita</a></li>
+        <li><a href="seia.html" style="color:yellow; text-decoration:none;">yurizono seia</a></li>
+        <li><a href="alice.html" style="color:cyan; text-decoration:none;">tendou alice</a></li>
+        <li><a href="chino.html" style="color:lightgray; text-decoration:none;">caffu chino</a></li>
+        <li><a href="natsu.html" style="color:pink; text-decoration:none;">yutori natsu</a></li>
+    </ul>
+  </div>  
+  <!------------ini sarang karbit---------->
+  <section class="about-cihuy" id="alice">
+    <div class="about">
+      <img src="./image/natsu.png" class="pic">
+      <div class="text">
+        <h2>Yutori Natsu</h2>
+        <h5>waifu ke <span style="color: pink;">kelima</span></h5><p>Yutori Natsu (柚鳥ナツ, Yutori Natsu ) adalah salah satu siswa di Sekolah Umum Trinity yang menggunakan Sub-Machine Gun.Dia merupakan anggota Klub Manisan Sepulang Sekolah.</p>
+        <div class="data">
+          <a href="https://myanimelist.net/character/249846/Natsu_Yutori" style="background: pink;" class="tombol">Info Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <!-------footer-------->
+  <footer class="site-footer">
+    <p>&copy; 2025 Abu Kentucky. All rights reserved.</p>
+  </footer>  
+  <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background: #000;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+body.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+.header {
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.judul {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.nav-menu li {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+.nav-menu li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.mobile-menu-overlay ul {
+  list-style: none;
+  text-align: center;
+}
+.mobile-menu-overlay li {
+  margin: 15px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.close:hover {
+  transform: rotate(90deg);
+}
+.about-cihuy {
+  min-height: 100vh;
+  width: 100%;
+  padding: 130px 20px 90px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pic {
+  width: 302px;
+  height: auto;
+}
+.about {
+  max-width: 1130px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.text {
+  max-width: 540px;
+}
+.text h2 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+.data {
+  margin-top: 30px;
+}
+.tombol {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  padding: 8px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.tombol:hover {
+  background: #000;
+}
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #888;
+  margin-top: -30px;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+  .about-cihuy {
+    padding: 100px 15px 60px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pic {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .text h2 {
+    font-size: 40px;
+  }
+
+  .text h5 {
+    font-size: 18px;
+  }
+
+  .text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .tombol {
+    padding: 6px 20px;
+    font-size: 16px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
